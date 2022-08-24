@@ -21,10 +21,14 @@ function App() {
                 description: task.description}])  
         }
 
+        const deleteTask = (taskId) => {
+                setTasks(tasks.filter(task => task.id !== taskId))
+        } 
+
   return (
     <div className="App">
         <TaskForm createTask={createTask} />
-       <TaskList tasks={tasks} />
+       <TaskList tasks={tasks} deleteTask={deleteTask} />
     </div>
   )
 }
