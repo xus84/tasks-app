@@ -5,11 +5,11 @@ export const TaskList = ({tasks, deleteTask  }) => {
 
        
 
-        if(tasks.length === 0) return <h1>There are any tasks</h1>
+        if(tasks.length === 0) return <h1 className='text-white text-4x1 font-bold text-center'>There are any tasks</h1>
 
 
   return (
-    <div>
+    <div className='grid grid-cols-4 gap-2'>
         {tasks.map((task) => (
          <TaskCard key={task.id} task={task} deleteTask={deleteTask}/>
         ))}
